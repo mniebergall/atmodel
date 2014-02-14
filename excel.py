@@ -9,9 +9,9 @@ class ExcelReader:
         self.book = open_workbook(file_location, on_demand = True)
         self.sheet = self.book.sheet_by_index(0)
         self.row_offset = 1
-        self.col_offset = 0
-        self.freq_offset = 0.05
-        self.freq_step_size = 0.1
+        #self.col_offset = 0
+        #self.freq_offset = 0.05
+        #self.freq_step_size = 0.1
         
     def read_from_col(self, col):
         result = []
@@ -48,8 +48,8 @@ class ExcelReader:
         print("row end is " + str(self.row_end))
 
     def set_freq_range_Hz(self, freq_start, freq_end):
-        self.freq_offset *= 3e10 #1.5e9
-        self.freq_step_size *= 3e10 #3e9
+        #self.freq_offset *= 3e10 #1.5e9
+        #self.freq_step_size *= 3e10 #3e9
         self.set_freq_range(freq_start, freq_end)
 
 #to generate XLS excel format
